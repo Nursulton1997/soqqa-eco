@@ -13,4 +13,9 @@ class ExternalUser extends Model
     public $timestamps = true;
 
     protected $guarded = [];
+
+    public function transfers()
+    {
+        return $this->hasMany(Transfer::class, 'user_id');
+    }
 }
