@@ -43,17 +43,16 @@ return [
         ],
 
         'mobile' => [
-            'driver' => 'psql',
+            'driver' => 'pgsql',
             'host' => env('DB_MOBILE_HOST', '127.0.0.1'),
             'port' => env('DB_MOBILE_PORT', '5432'),
             'database' => env('DB_MOBILE_DATABASE', 'forge'),
             'username' => env('DB_MOBILE_USERNAME', 'forge'),
             'password' => env('DB_MOBILE_PASSWORD', ''),
-            'charset' => 'utf8mb4',
-            'collation' => 'utf8mb4_unicode_ci',
+            'charset' => 'utf8',
             'prefix' => '',
-            'strict' => true,
-            'engine' => null,
+            'schema' => 'public',
+            'sslmode' => 'prefer',
         ],
 
         'mysql' => [
